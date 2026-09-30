@@ -1,0 +1,98 @@
+[
+  {
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "category": "Fiction",
+    "isAvailable": true
+  },
+  {
+    "title": "1984",
+    "author": "George Orwell",
+    "category": "Dystopian",
+    "isAvailable": false
+  },
+  {
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "category": "Classic",
+    "isAvailable": true
+  },
+  {
+    "title": "A Brief History of Time",
+    "author": "Stephen Hawking",
+    "category": "Science",
+    "isAvailable": false
+  },
+  {
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "category": "Fantasy",
+    "isAvailable": true
+  },
+  {
+    "title": "Steve Jobs",
+    "author": "Walter Isaacson",
+    "category": "Biography",
+    "isAvailable": true
+  },
+  {
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "category": "Technology",
+    "isAvailable": false
+  },
+  {
+    "title": "The Silent Patient",
+    "author": "Alex Michaelides",
+    "category": "Mystery",
+    "isAvailable": true
+  },
+  {
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "category": "Self-Help",
+    "isAvailable": true
+  },
+  {
+    "title": "The Fellowship of the Ring",
+    "author": "J.R.R. Tolkien",
+    "category": "Fantasy",
+    "isAvailable": false
+  },
+  {
+    "title": "A Game of Thrones",
+    "author": "George R.R. Martin",
+    "category": "Fantasy",
+    "isAvailable": true
+  },
+  {
+    "title": "The Martian",
+    "author": "Andy Weir",
+    "category": "Science",
+    "isAvailable": true
+  },
+  {
+    "title": "Eloquent JavaScript",
+    "author": "Marijn Haverbeke",
+    "category": "Coding",
+    "isAvailable": true
+  },
+  {
+    "title": "JavaScript: The Good Parts",
+    "author": "Douglas Crockford",
+    "category": "Coding",
+    "isAvailable": false
+  },
+  {
+    "title": "You Don't Know JS",
+    "author": "Kyle Simpson",
+    "category": "Coding",
+    "isAvailable": true
+  },
+  {
+    "title": "The Pragmatic Programmer",
+    "author": "Andrew Hunt and David Thomas",
+    "category": "Coding",
+    "isAvailable": false
+  }
+]

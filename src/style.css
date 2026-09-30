@@ -1,8 +1,327 @@
+:root {
+  --clr-main: #1f4339;
+  --bg--main: #edf2f6;
+  --m-section: 20px;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-h1 {
-  background: blue;
+
+body {
+  font-family: Inter, "Segoe UI", sans-serif;
+  background: var(--bg--main);
+  min-height: 100vh;
+}
+
+/* ===========
+main container
+=========== */
+.main-container {
+  padding: 20px;
+}
+
+/* ===========
+header
+=========== */
+/* logo */
+.logo {
+  height: 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: var(--clr-main);
+  background: var(--bg--main);
+  margin-bottom: var(--m-section);
+}
+
+.logo img {
+  display: block;
+  height: 100px;
+}
+
+/* ===========
+search & filter
+=========== */
+.filters {
+  display: grid;
+
+  grid-template-columns: minmax(300px, 2fr) minmax(240px, 1fr);
+  gap: 18px;
+  margin-bottom: var(--m-section);
+}
+
+.search-box,
+.category-filter {
+  height: 54px;
+  background: white;
+  border: 1px solid #ccd9e8;
+  border-radius: 7px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 18px;
+
+  transition: border-color 0.2s ease;
+}
+
+.search-box:focus-within,
+.category-filter:focus-within {
+  border-color: #439575;
+}
+
+.search-box input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 17px;
+  color: var(--clr-main);
+}
+
+.search-box input::placeholder {
+  color: #9aabc2;
+}
+
+.category-filter select {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--clr-main);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* ===========
+book-grid
+=========== */
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.book-card {
+  background: white;
+  border: 1px solid #d4dfed;
+  border-radius: 8px;
+  padding: 26px 24px 24px;
+  min-height: 310px;
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.book-card h2 {
+  font-size: 24px;
+  line-height: 1.25;
+  margin-bottom: var(--m-section);
+  color: #172b4d;
+}
+
+/* book-info */
+.book-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--m-section);
+  color: #526887;
+  font-size: 16px;
+}
+
+.book-info > div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.label {
+  font-weight: bold;
+  color: #526887;
+}
+
+/* badges */
+
+.category {
+  display: flex;
+  align-items: center;
+
+  padding: 7px 13px;
+  border-radius: 20px;
+
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Category Colors */
+
+.coding {
+  background: #dbeafe;
+  color: #1769d1;
+}
+.fantasy {
+  background: #dbeafe;
+  color: #bd7000;
+}
+.biography {
+  background: #dbeafe;
+  color: goldenrod;
+}
+.mystery {
+  background: #dbeafe;
+  color: #e73545;
+}
+.fiction {
+  background: #dbeafe;
+  color: #7444dc;
+}
+
+.self-help {
+  background: #dbeafe;
+  color: #bd7000;
+}
+
+.dystopian {
+  background: #dbeafe;
+  color: #df3342;
+}
+
+.classic {
+  background: #dbeafe;
+  color: #13956f;
+}
+
+.science {
+  background: #dbeafe;
+  color: #7444dc;
+}
+
+.technology {
+  background: #dbeafe;
+  color: #1769d1;
+}
+
+/* availability */
+
+.availability {
+  display: flex;
+
+  padding: 7px 13px;
+
+  border-radius: 20px;
+
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.available {
+  background: #d9f5e7;
+  color: #15945e;
+}
+
+.unavailable {
+  background: #ffe0e4;
+  color: #e73545;
+}
+
+/* toggle */
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Hide checkbox */
+
+.toggle-container input {
+  display: none;
+}
+
+.toggle {
+  position: relative;
+  width: 58px;
+  height: 34px;
+  border-radius: 20px;
+  background: #aebbd0;
+  transition: background 0.25s ease;
+}
+
+/* toggle circle */
+
+.toggle::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+
+  width: 26px;
+  height: 26px;
+
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  transition: transform 0.25s ease;
+}
+
+/* Checked State */
+.toggle-container input:checked + .toggle {
+  background: #16a166;
+}
+
+.toggle-container input:checked + .toggle::after {
+  transform: translateX(24px);
+}
+
+/* Toggle Label */
+
+.toggle-label {
+  color: #7185a3;
+  font-size: 15px;
+}
+
+/* =============
+mobile
+============= */
+@media (max-width: 900px) {
+  .books-grid {
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .logo {
+    justify-content: center;
+  }
+
+  .filters {
+    grid-template-columns: minmax(250px, 1fr);
+  }
+
+  .books-grid {
+    grid-template-columns: minmax(250px, 1fr);
+    text-align: center;
+  }
+
+  .book-info > div {
+    justify-content: center;
+  }
+
+  .toggle-container {
+    justify-content: center;
+  }
 }
